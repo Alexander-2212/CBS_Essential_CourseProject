@@ -10,6 +10,17 @@ namespace Project_10
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.Unicode;
+
+            TSimpleGarland simpleGarland = new TSimpleGarland();
+            simpleGarland.PrintStateOfLights();
+
+            Console.WriteLine(new string('_', 30));
+
+            TColorGarland colorGarland = new TColorGarland();
+            colorGarland.PrintStateOfLights();
+
+            Console.ReadKey();
         }
     }
 }

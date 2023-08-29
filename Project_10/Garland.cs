@@ -9,6 +9,6 @@ namespace Project_10
     abstract class Garland
     {
         protected List<TLight> Lights;
-        public abstract void PrintStateofLights();
+        public abstract void PrintStateOfLights();
     }
 }
