@@ -47,6 +47,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TColorGarland.cs" />
+    <Compile Include="TColorLight.cs" />
+    <Compile Include="TLight.cs" />
     <Compile Include="TSimpleGarland.cs" />
   </ItemGroup>
   <ItemGroup>
