@@ -8,14 +8,19 @@ namespace Project_10
 {
     enum TLightColor
     {
-        lcGreen,
-        lcRed,
-        lcYellow,
-        lcBlue
+        lcGreen = ConsoleColor.Green,
+        lcRed = ConsoleColor.Red,
+        lcYellow = ConsoleColor.Yellow,
+        lcBlue = ConsoleColor.Blue
     }
 
     internal class TLight
     {
         public bool IsOn { get; set; }
+
+        public void Switch()
+        {
+            IsOn = !IsOn;
+        }
     }
 }

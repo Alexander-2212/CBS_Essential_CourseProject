@@ -22,11 +22,37 @@ namespace Project_10
             }
         }
 
+        
         public override void PrintStateOfLights()
         {
+            int index = 1;
+
             foreach (TColorLight light in Lights)
             {
-                Console.WriteLine($"{(light.IsOn ? "увімкнена" : "вимкнена")} - {light.GetColorAsString()}");
+                Console.ForegroundColor = (ConsoleColor)light.FColor;
+                Console.WriteLine($"{index}. {(light.IsOn ? "ON" : "OFF")} - {light.GetColorAsString()}");
+                Console.ForegroundColor = ConsoleColor.Gray;
+                index++;
+            }
+        }
+
+        public override void SwitchLight(int index)
+        {
+            if (index >= 0 && index < Lights.Count)
+            {
+                Lights[index].Switch();
+            }
+            else
+            {
+                Console.WriteLine("Невірний індекс лампочки.");
+            }
+        }
+
+        public override void SwitchAllLights()
+        {
+            foreach (var light in Lights)
+            {
+                light.Switch();
             }
         }
     }

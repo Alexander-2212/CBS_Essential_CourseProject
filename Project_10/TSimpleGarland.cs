@@ -20,9 +20,32 @@ namespace Project_10
 
         public override void PrintStateOfLights()
         {
+            int index = 1;
+
             foreach (var light in Lights)
             {
-                Console.WriteLine(light.IsOn ? "увімкнена" : "вимкнена");
+                Console.WriteLine($"{index}. {(light.IsOn ? "ON" : "OFF")}");
+                index++;
+            }
+        }
+
+        public override void SwitchLight(int index)
+        {
+            if (index >= 0 && index < Lights.Count)
+            {
+                Lights[index].Switch();
+            }
+            else
+            {
+                Console.WriteLine("Невірний індекс лампочки.");
+            }
+        }
+
+        public override void SwitchAllLights()
+        {
+            foreach (var light in Lights)
+            {
+                light.Switch();
             }
         }
     }

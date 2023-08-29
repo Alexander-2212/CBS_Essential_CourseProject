@@ -10,5 +10,9 @@ namespace Project_10
     {
         protected List<TLight> Lights;
         public abstract void PrintStateOfLights();
+
+        public abstract void SwitchLight(int index);
+
+        public abstract void SwitchAllLights();
     }
 }
