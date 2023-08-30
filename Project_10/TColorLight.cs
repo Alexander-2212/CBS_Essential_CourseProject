@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_10
+namespace Project_10_Garland
 {
     internal class TColorLight : TLight
     {

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_11", "Project_11\Project_11.csproj", "{C06D39B8-ADD5-42B4-BF5C-6239961924FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_11_Quadratic_Equation", "Project_11\Project_11_Quadratic_Equation.csproj", "{C06D39B8-ADD5-42B4-BF5C-6239961924FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_10", "Project_10\Project_10.csproj", "{CF7C0CD1-EEAD-42B3-A67F-764BF3790DC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_10_Garland", "Project_10\Project_10_Garland.csproj", "{CF7C0CD1-EEAD-42B3-A67F-764BF3790DC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_13", "Project_13\Project_13.csproj", "{5991CBCE-4931-4E69-AE2B-D208FF7108AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_13_Dot", "Project_13\Project_13_Dot.csproj", "{5991CBCE-4931-4E69-AE2B-D208FF7108AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
