@@ -16,7 +16,7 @@ namespace Project_10_Garland
             Console.WriteLine("Стан звичайної гірлянди:");
             simpleGarland.PrintStateOfLights();
 
-            simpleGarland.SwitchAllLights(); // Вмикання всіх лампочок
+            simpleGarland.SwitchAllLights();
             Console.WriteLine("\nЗмінений стан звичайної гірлянди:");
             simpleGarland.PrintStateOfLights();
 
@@ -26,9 +26,21 @@ namespace Project_10_Garland
 
             Random random = new Random();
 
-            for (int i = 0; i < 6; i++)
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    colorGarland.SwitchLight(random.Next(12));
+            //}
+
+            HashSet<int> uniqueIndexes = new HashSet<int>();
+
+            while (uniqueIndexes.Count < 6)
             {
-                colorGarland.SwitchLight(random.Next(12));
+                uniqueIndexes.Add(random.Next(12));
+            }
+
+            foreach (var index in uniqueIndexes)
+            {
+                colorGarland.SwitchLight(index);
             }
 
             Console.WriteLine("\nЗміненний стан кольорової гірлянди:");
