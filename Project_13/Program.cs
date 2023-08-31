@@ -12,13 +12,45 @@ namespace Project_13_Dot
         {
             Console.OutputEncoding = Encoding.Unicode;
 
-            Dot dot1 = new Dot(0, 0);
-            Dot dot2 = new Dot(6, 4);
+            Console.WriteLine("Введіть координати для першої точки:");
+            Console.Write("X1: ");
+            double x1;
+            while (!double.TryParse(Console.ReadLine(), out x1))
+                Console.WriteLine("Введіть коректне значення для X1:");
 
-            Rectangle rectangle = new Rectangle(dot1, dot2);
 
-            Console.WriteLine($"Площа прямокутника: {rectangle.Area()}");
-            Console.WriteLine($"Периметр прямокутника: {rectangle.Perimeter()}");
+            Console.Write("Y1: ");
+            double y1;
+            while (!double.TryParse(Console.ReadLine(), out y1))
+                Console.WriteLine("Введіть коректне значення для Y1:");
+
+
+            Console.WriteLine("Введіть координати для другої точки:");
+            Console.Write("X2: ");
+            double x2;
+            while (!double.TryParse(Console.ReadLine(), out x2))
+                Console.WriteLine("Введіть коректне значення для X2:");
+
+
+            Console.Write("Y2: ");
+            double y2;
+            while (!double.TryParse(Console.ReadLine(), out y2))
+                Console.WriteLine("Введіть коректне значення для Y2:");
+
+            Dot dot1 = new Dot(x1, y1);
+            Dot dot2 = new Dot(x2, y2);
+
+            try
+            {
+                Rectangle rectangle = new Rectangle(dot1, dot2);
+
+                Console.WriteLine($"Площа прямокутника: {rectangle.Area()}");
+                Console.WriteLine($"Периметр прямокутника: {rectangle.Perimeter()}");
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.ReadKey();
         }
