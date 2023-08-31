@@ -19,16 +19,16 @@ namespace Project_11_Quadratic_Equation
             {
                 double x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
                 double x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
-                return new Solution(x1, x2);
+                return new Solution(discriminant, x1, x2);
             }
             else if (discriminant == 0)
             {
                 double x = -b / (2 * a);
-                return new Solution(x);
+                return new Solution(discriminant, x);
             }
             else
             {
-                return new Solution();
+                return new Solution(discriminant);
             }
         }
 

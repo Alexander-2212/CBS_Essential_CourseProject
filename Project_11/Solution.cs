@@ -10,37 +10,50 @@ namespace Project_11_Quadratic_Equation
     {
         public double? X1 { get; }
         public double? X2 { get; }
+        public double Discriminant { get; }
         public string Status { get; }
 
-        public Solution(double x1, double x2)
+        public Solution(double discriminant, double x1, double x2)
         {
+            Discriminant = discriminant;
             X1 = x1;
             X2 = x2;
             Status = "Два корені";
         }
 
-        public Solution(double x)
+        public Solution(double discriminant, double x)
         {
+            Discriminant = discriminant;
             X1 = x;
             Status = "Один корінь";
         }
 
-        public Solution()
+        public Solution(double discriminant)
         {
+            Discriminant = discriminant;
             Status = "Немає коренів";
         }
 
         public override string ToString()
         {
+            string result = $"Дискримінант: {Discriminant}\n";
+
             switch (Status)
             {
                 case "Два корені":
-                    return $"Корені: x1 = {X1}, x2 = {X2}";
+                    result += $"Розрахунки коренів:\n";
+                    result += $"x1 = (-b + √D) / 2a = {X1}\n";
+                    result += $"x2 = (-b - √D) / 2a = {X2}";
+                    break;
                 case "Один корінь":
-                    return $"Корінь: x = {X1}";
+                    result += $"Розрахунки коренів:\n";
+                    result += $"x = -b / 2a = {X1}";
+                    break;
                 default:
-                    return "Немає коренів";
+                    result += "Немає коренів.";
+                    break;
             }
+            return result;
         }
     }
 }
