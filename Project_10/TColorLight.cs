@@ -8,7 +8,7 @@ namespace Project_10_Garland
 {
     internal class TColorLight : TLight
     {
-        public TLightColor FColor { get; set; }
+        public TLightColor FColor { get; }
 
         public TColorLight(TLightColor color)
         {

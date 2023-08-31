@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project_13_Dot
 {
-    internal class Point
+    internal class Dot
     {
-        public double X { get; set; }
-        public double Y { get; set; }
+        public double X { get; }
+        public double Y { get; }
 
-        public Point(double x, double y)
+        public Dot(double x, double y)
         {
             X = x;
             Y = y;

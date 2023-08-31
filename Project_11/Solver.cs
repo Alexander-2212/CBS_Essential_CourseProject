@@ -34,7 +34,6 @@ namespace Project_11_Quadratic_Equation
 
         private double CalculateDiscriminant(double a, double b, double c)
         {
-            
             return b * b - 4 * a * c;
         }
     }

@@ -8,26 +8,26 @@ namespace Project_13_Dot
 {
     internal class Rectangle
     {
-        public Point Point1 { get; set; }
-        public Point Point2 { get; set; }
+        public Dot Dot1 { get; }
+        public Dot Dot2 { get; }
 
-        public Rectangle(Point point1, Point point2)
+        public Rectangle(Dot dot1, Dot dot2)
         {
-            if (point1.X == point2.X || point1.Y == point2.Y)
+            if (dot1.X == dot2.X || dot1.Y == dot2.Y)
                 throw new ArgumentException("Дві точки лежать на одній прямій!");
 
-            Point1 = point1;
-            Point2 = point2;
+            Dot1 = dot1;
+            Dot2 = dot2;
         }
 
         public double Area()
         {
-            return Math.Abs(Point1.X - Point2.X) * Math.Abs(Point1.Y - Point2.Y);
+            return Math.Abs(Dot1.X - Dot2.X) * Math.Abs(Dot1.Y - Dot2.Y);
         }
 
         public double Perimeter()
         {
-            return 2 * (Math.Abs(Point1.X - Point2.X) + Math.Abs(Point1.Y - Point2.Y));
+            return 2 * (Math.Abs(Dot1.X - Dot2.X) + Math.Abs(Dot1.Y - Dot2.Y));
         }
 
     }

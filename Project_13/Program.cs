@@ -12,10 +12,10 @@ namespace Project_13_Dot
         {
             Console.OutputEncoding = Encoding.Unicode;
 
-            Point point1 = new Point(0, 0);
-            Point point2 = new Point(6, 4);
+            Dot dot1 = new Dot(0, 0);
+            Dot dot2 = new Dot(6, 4);
 
-            Rectangle rectangle = new Rectangle(point1, point2);
+            Rectangle rectangle = new Rectangle(dot1, dot2);
 
             Console.WriteLine($"Площа прямокутника: {rectangle.Area()}");
             Console.WriteLine($"Периметр прямокутника: {rectangle.Perimeter()}");
